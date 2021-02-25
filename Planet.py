@@ -5,8 +5,43 @@ class Planet:
         self.__distance = distance
         self.__circles = circles
 
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        self.__name = value
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        self.__size = value
+
+    @property
+    def distance(self):
+        return self.__distance
+
+    @distance.setter
+    def distance(self, value):
+        self.__distance = value
+
+    @property
+    def circles(self):
+        return self.__circles
+
+    @circles.setter
+    def circles(self, value):
+        if type(value) == bool:
+            self.__circles = value
+
     def __str__(self):
         return f"{self.__name}, {self.__size}, {self.__distance}"
 
-p1 = Planet("hscbshjdbk", 12344, 7627638277287, True)
+p1 = Planet("name", 123123, 123143143423423, True)
+print(p1.name)
+p1.size = 8989880000
 print(p1)
