@@ -41,7 +41,5 @@ class Planet:
     def __str__(self):
         return f"{self.__name}, {self.__size}, {self.__distance}"
 
-p1 = Planet("name", 123123, 123143143423423, True)
-print(p1.name)
-p1.size = 8989880000
-print(p1)
+    def edit_size(self, value):
+        self.size += value
